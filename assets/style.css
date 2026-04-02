@@ -174,11 +174,11 @@
   }
 }
 @layer utilities {
+  .mx-5 {
+    margin-inline: calc(var(--spacing) * 5);
+  }
   .mb-5 {
     margin-bottom: calc(var(--spacing) * 5);
-  }
-  .mb-10 {
-    margin-bottom: calc(var(--spacing) * 10);
   }
   .flex {
     display: flex;
@@ -188,12 +188,6 @@
   }
   .h-screen {
     height: 100vh;
-  }
-  .w-\[25\%\] {
-    width: 25%;
-  }
-  .w-\[50\%\] {
-    width: 50%;
   }
   .w-screen {
     width: 100vw;
@@ -210,23 +204,8 @@
   .items-center {
     align-items: center;
   }
-  .items-end {
-    align-items: flex-end;
-  }
-  .justify-between {
-    justify-content: space-between;
-  }
   .justify-center {
     justify-content: center;
-  }
-  .justify-end {
-    justify-content: flex-end;
-  }
-  .gap-5 {
-    gap: calc(var(--spacing) * 5);
-  }
-  .rounded {
-    border-radius: 0.25rem;
   }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
@@ -241,21 +220,6 @@
   }
   .bg-blue-50 {
     background-color: var(--color-blue-50);
-  }
-  .bg-blue-100 {
-    background-color: var(--color-blue-100);
-  }
-  .bg-blue-200 {
-    background-color: var(--color-blue-200);
-  }
-  .bg-blue-300 {
-    background-color: var(--color-blue-300);
-  }
-  .bg-blue-400 {
-    background-color: var(--color-blue-400);
-  }
-  .bg-blue-500 {
-    background-color: var(--color-blue-500);
   }
   .bg-linear-to-tr {
     --tw-gradient-position: to top right;
@@ -275,10 +239,6 @@
   .p-5 {
     padding: calc(var(--spacing) * 5);
   }
-  .text-2xl {
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
-  }
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
@@ -290,41 +250,33 @@
   .underline {
     text-decoration-line: underline;
   }
-  .shadow-2xl {
-    --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .shadow-2xs {
-    --tw-shadow: 0 1px var(--tw-shadow-color, rgb(0 0 0 / 0.05));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .shadow-\[0_35px_60px_-15px_rgba\(0\,0\,0\,0\.3\)\] {
-    --tw-shadow: 0 35px 60px -15px var(--tw-shadow-color, rgba(0,0,0,0.3));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .shadow-\[0px_5px_10px_-15px_rgba\(0\,0\,0\,0\.3\)\] {
-    --tw-shadow: 0px 5px 10px -15px var(--tw-shadow-color, rgba(0,0,0,0.3));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .shadow-\[5px_5px_0px_-15px_rgba\(0\,0\,0\,0\.3\)\] {
-    --tw-shadow: 5px 5px 0px -15px var(--tw-shadow-color, rgba(0,0,0,0.3));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
   .shadow-\[5px_5px_0px_0px_\#000\] {
     --tw-shadow: 5px 5px 0px 0px var(--tw-shadow-color, #000);
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .shadow-\[5px_5px_1px_-15px_rgba\(0\,0\,0\,0\.3\)\] {
-    --tw-shadow: 5px 5px 1px -15px var(--tw-shadow-color, rgba(0,0,0,0.3));
-    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  }
-  .shadow-\[5px_5px_10px_-15px_rgba\(0\,0\,0\,0\.3\)\] {
-    --tw-shadow: 5px 5px 10px -15px var(--tw-shadow-color, rgba(0,0,0,0.3));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
   .outline {
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
+  }
+  .md\:max-w-\[25\%\] {
+    @media (width >= 48rem) {
+      max-width: 25%;
+    }
+  }
+  .md\:max-w-\[250px\] {
+    @media (width >= 48rem) {
+      max-width: 250px;
+    }
+  }
+  .md\:max-w-\[500px\] {
+    @media (width >= 48rem) {
+      max-width: 500px;
+    }
+  }
+  .lg\:max-w-\[25\%\] {
+    @media (width >= 64rem) {
+      max-width: 25%;
+    }
   }
 }
 @property --tw-border-style {
